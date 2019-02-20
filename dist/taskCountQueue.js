@@ -100,19 +100,16 @@ class TaskCountQueue {
         }
         else {
             while (this.taskList.length > 0) {
-                const fn = this.taskList.shift();
-                if (fn) {
-                    try {
-                        const fn = this.taskList.shift();
-                        if (fn) {
-                            fn();
-                        }
+                try {
+                    const fn = this.taskList.shift();
+                    if (fn) {
+                        fn();
                     }
-                    catch (ex) {
-                    }
-                    if (this.onceTimeSpan > 0 && (Date.now() - startTime) > this.onceTimeSpan) {
-                        break;
-                    }
+                }
+                catch (ex) {
+                }
+                if (this.onceTimeSpan > 0 && (Date.now() - startTime) > this.onceTimeSpan) {
+                    break;
                 }
             }
         }
