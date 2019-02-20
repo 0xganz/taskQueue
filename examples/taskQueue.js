@@ -1,7 +1,5 @@
-# taskQueue
-使用过多setTimeout，会产生性能问题。taskQueue,将多个任务，整合在一个队列中，使用一个定时器去执行指定数量的任务。
+const { TaskCountQueue } = require('../');
 
-```js
 const taskqueue = new TaskCountQueue();
 
 taskqueue.setFirstTime(true);
@@ -20,4 +18,3 @@ for (let index = 0; index < 100000; index++) {
           console.log(index);
      })
 }
-```

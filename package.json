@@ -1,0 +1,19 @@
+{
+  "name": "taskqueue",
+  "version": "1.0.0",
+  "description": "collects min tasks to one task",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "taskqueue",
+    "more",
+    "tasks"
+  ],
+  "author": "zg",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^11.9.4"
+  }
+}
